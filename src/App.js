@@ -13,7 +13,7 @@ function App() {
   const [numbers, setNumbers] = useState([]);
 
   const getData = async () => {
-    fetch("http://localhost:3001/")
+    fetch("/api")
       .then((res) => {
         return res.json();
       })

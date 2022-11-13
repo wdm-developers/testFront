@@ -3,10 +3,11 @@ const app = express();
 const port = 3001;
 const numbers = ["1", "2", "3", "4", "5", "6"];
 var cors = require("cors");
-
+const helmet = require("helmet");
 app.use(cors());
+app.use(helmet());
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.json(numbers);
 });
 
